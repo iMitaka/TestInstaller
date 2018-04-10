@@ -45,7 +45,7 @@ branches:
 
 # to run your custom scripts instead of automatic MSBuild
 build_script:
-  - nuget pack HelloWorld.nuspec
+  - .\nuget pack HelloWorld.nuspec
   - Squirrel --releasify HelloWorld.{version}.nupkg --releaseDir ".\SquirrelReleases"
 
 #---------------------------------#
