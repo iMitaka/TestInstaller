@@ -1,0 +1,5 @@
+.vs/
+packages/
+HellowWorld/bin/
+HellowWorld/obj/
+*.nupkg

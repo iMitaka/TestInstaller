@@ -1,0 +1,1 @@
+Squirrel --releasify HelloWorld.1.0.0.nupkg --releaseDir "C:\SquirrelReleases"

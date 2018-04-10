@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>HelloWorld</id>
+    <version>1.0.3</version>
+    <authors>Me</authors>
+    <owners>Me</owners>
+    <description>HelloWorld - Squirrel</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright ©  2017</copyright>
+  </metadata>
+  <files>
+    <file src="HellowWorld\bin\Release\*.*" target="lib\net45\" exclude="*.pdb;*.vshost.*"/>
+  </files>
+</package>
