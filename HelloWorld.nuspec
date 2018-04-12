@@ -10,6 +10,6 @@
     <copyright>Copyright ©  2017</copyright>
   </metadata>
   <files>
-    <file src="HellowWorld\bin\x86\Release\*.*" target="lib\net45\" exclude="*.pdb;*.vshost.*"/>
+    <file src="HellowWorld\bin\x86\Debug\*.*" target="lib\net45\" exclude="*.pdb;*.vshost.*"/>
   </files>
 </package>
