@@ -53,7 +53,7 @@ test: off
 
 artifacts:
   # - path: '.\SquirrelReleases\*'
-  -path: if %platform%==x86 ( .\SquirrelReleases\x86 ) if %platform%==x64( \SquirrelReleases\x64 )
+  - path: if %platform%==x86 ( .\SquirrelReleases\x86 ) if %platform%==x64( \SquirrelReleases\x64 )
     name: releases
 
 #---------------------------------#
