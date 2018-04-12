@@ -39,8 +39,6 @@ after_build:
   - if %platform%==x64 ( nuget pack HelloWorldx64.nuspec -version 1.1.1 )
   - if %platform%==x86 ( C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorld.1.1.1.nupkg --releaseDir ".\SquirrelReleases\x86" )
   - if %platform%==x64 ( C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorldx64.1.1.1.nupkg --releaseDir ".\SquirrelReleases\x64" )
-  - $path = "\\Server\Share"
-  - if %platform%==x86 ( $path = ".\SquirrelReleases\x86" ) if %platform%==x64(  $path = ".\SquirrelReleases\x64" )
 
 #---------------------------------#
 #       tests configuration       #
@@ -53,9 +51,11 @@ test: off
 #---------------------------------#
 
 artifacts:
-  # - path: '.\SquirrelReleases\*'
-  - path: $path
-    name: releases
+  - path: '.\SquirrelReleases\x86'
+    name: releasesx86
+
+  - path: '.\SquirrelReleases\x64'
+    name: releasesx64
 
 #---------------------------------#
 #      deployment configuration   #
