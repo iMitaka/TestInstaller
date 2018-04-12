@@ -17,36 +17,26 @@ pull_requests:
 #---------------------------------#
 
 # Operating system (build VM template)
-os: Default Azure
+# os: Default Azure
 
 platform:
   - x86
-  - x64
 
 configuration:
   - Debug
-  - Release
-
-# environment variables
-environment:
-  BuildEnvironment: appveyor
-
-# branches to build
-branches:
-  # whitelist
-  only:
-    - master
-    # tags
-    - /\d+\.\d+\.\d+/
 
 #---------------------------------#
 #       build configuration       #
 #---------------------------------#
 
 # to run your custom scripts instead of automatic MSBuild
-build_script:
-  - .\nuget pack HelloWorld.nuspec
+before_build:
+  - nuget restore HellowWorld.sln
+
+after_build:
+  - nuget pack HelloWorld.nuspec
   - Squirrel --releasify HelloWorld.{version}.nupkg --releaseDir ".\SquirrelReleases"
+
 
 #---------------------------------#
 #       tests configuration       #
