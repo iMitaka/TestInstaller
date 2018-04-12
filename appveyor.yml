@@ -35,11 +35,10 @@ before_build:
   - nuget restore HellowWorld.sln
 
 after_build:
-  - echo '{version}'
-  - nuget pack HelloWorld.nuspec -version '{version}'
-  - nuget pack HelloWorldx64.nuspec -version '{version}'
-  - C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorld.{version}.nupkg --releaseDir ".\SquirrelReleases\x86"
-  - C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorldx64.{version}.nupkg --releaseDir ".\SquirrelReleases\x64"
+  - nuget pack HelloWorld.nuspec -version 1.1.1
+  - nuget pack HelloWorldx64.nuspec -version 1.1.1
+  - C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorld.1.1.1.nupkg --releaseDir ".\SquirrelReleases\x86"
+  - C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorldx64.1.1.1.nupkg --releaseDir ".\SquirrelReleases\x64"
 
 
 #---------------------------------#

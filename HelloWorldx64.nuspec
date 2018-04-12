@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>HelloWorldx64</id>
-    <version>{version}</version>
+    <version>1.1.1</version>
     <authors>Me</authors>
     <owners>Me</owners>
     <description>HelloWorldx64 - Squirrel</description>
