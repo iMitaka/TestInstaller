@@ -35,8 +35,7 @@ before_build:
 
 after_build:
   - nuget pack HelloWorld.nuspec
-  # - Squirrel --releasify HelloWorld.{version}.nupkg --releaseDir ".\SquirrelReleases"
-  - Squirrel.bat
+  - .\packages\squirrel.windows.*\tools\Squirrel.exe --releasify HelloWorld.{version}.nupkg --releaseDir ".\SquirrelReleases"
 
 
 #---------------------------------#
