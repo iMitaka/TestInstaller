@@ -35,7 +35,9 @@ before_build:
 
 after_build:
   - nuget pack HelloWorld.nuspec
-  - Squirrel --releasify HelloWorld.{version}.nupkg --releaseDir ".\SquirrelReleases"
+  # - Squirrel --releasify HelloWorld.{version}.nupkg --releaseDir ".\SquirrelReleases"
+  - $squirrel = "$package_dir\squirrel.windows.*\tools\Squirrel.exe"
+.$squirrel -releasify "$build_dir\SparkleShare.$version.nupkg" -releaseDir $release_dir -setupIcon "$build_dir\sparkleshare-app.ico" -loadingGif "$src_dir\Pixmaps\install-spinner.gif" | Out-Null
 
 
 #---------------------------------#
