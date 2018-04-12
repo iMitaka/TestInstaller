@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>HelloWorld</id>
-    <version>1.0.3</version>
+    <version>{version}</version>
     <authors>Me</authors>
     <owners>Me</owners>
     <description>HelloWorld - Squirrel</description>
