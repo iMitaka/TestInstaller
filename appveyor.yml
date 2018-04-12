@@ -35,10 +35,10 @@ before_build:
   - nuget restore HellowWorld.sln
 
 after_build:
-  - if %platform%==x86 ( nuget pack HelloWorld.nuspec -version %version% ) 
-  - if %platform%==x64 ( nuget pack HelloWorldx64.nuspec -version %version% )
-  - if %platform%==x86 ( C:\projects\testinstaller\packages\squirrel.windows.*\tools\Squirrel.exe --releasify HelloWorld.%version%.nupkg --releaseDir ".\SquirrelReleases\x86" )
-  - if %platform%==x64 ( C:\projects\testinstaller\packages\squirrel.windows.*\tools\Squirrel.exe --releasify HelloWorldx64.%version%.nupkg --releaseDir ".\SquirrelReleases\x64" )
+  - if %platform%==x86 ( nuget pack HelloWorld.nuspec -version 1.1.1 ) 
+  - if %platform%==x64 ( nuget pack HelloWorldx64.nuspec -version 1.1.1 )
+  - if %platform%==x86 ( C:\projects\testinstaller\packages\squirrel.windows.*\tools\Squirrel.exe --releasify HelloWorld.1.1.1.nupkg --releaseDir ".\SquirrelReleases\x86" )
+  - if %platform%==x64 ( C:\projects\testinstaller\packages\squirrel.windows.*\tools\Squirrel.exe --releasify HelloWorldx64.1.1.1.nupkg --releaseDir ".\SquirrelReleases\x64" )
 
 
 #---------------------------------#
