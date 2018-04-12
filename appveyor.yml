@@ -8,6 +8,7 @@
 
 # Don't edit manually! Use `build.bat version` command instead!
 shallow_clone: true
+version: '1.0.{build}'
 
 pull_requests:
   do_not_increment_build_number: true
@@ -21,6 +22,7 @@ pull_requests:
 
 platform:
   - x86
+  - x64
 
 configuration:
   - Debug
@@ -34,8 +36,10 @@ before_build:
   - nuget restore HellowWorld.sln
 
 after_build:
-  - nuget pack HelloWorld.nuspec
-  - C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorld.1.0.3.nupkg --releaseDir ".\SquirrelReleases"
+  - nuget pack HelloWorld.nuspec -v {version}
+  - nuget pack HelloWorldx64.nuspec -v {version}
+  - C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorld.{version}.nupkg --releaseDir ".\SquirrelReleases\x86"
+  - C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorldx64.{version}.nupkg --releaseDir ".\SquirrelReleases\x64"
 
 
 #---------------------------------#
