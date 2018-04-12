@@ -53,7 +53,9 @@ test: off
 
 artifacts:
   # - path: '.\SquirrelReleases\*'
-  - path: if %platform%==x86 ( .\SquirrelReleases\x86 ) if %platform%==x64( \SquirrelReleases\x64 )
+  - $path = "\\Server\Share"
+  - if %platform%==x86 ( $path = ".\SquirrelReleases\x86" ) if %platform%==x64(  $path = ".\SquirrelReleases\x64" )
+  - path: $path
     name: releases
 
 #---------------------------------#
