@@ -37,8 +37,8 @@ before_build:
 after_build:
   - if %platform%==x86 ( nuget pack HelloWorld.nuspec -version 1.1.1 ) 
   - if %platform%==x64 ( nuget pack HelloWorldx64.nuspec -version 1.1.1 )
-  - if %platform%==x86 ( C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorld.1.1.1.nupkg --releaseDir ".\SquirrelReleases" )
-  - if %platform%==x64 ( C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorldx64.1.1.1.nupkg --releaseDir ".\SquirrelReleases" )
+  - if %platform%==x86 ( C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorld.1.1.1.nupkg --releaseDir ".\x86\SquirrelReleases" )
+  - if %platform%==x64 ( C:\projects\testinstaller\packages\squirrel.windows.1.7.9\tools\Squirrel.exe --releasify HelloWorldx64.1.1.1.nupkg --releaseDir ".\x64\SquirrelReleases" )
 
 
 #---------------------------------#
