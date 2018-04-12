@@ -51,10 +51,10 @@ test: off
 #---------------------------------#
 
 artifacts:
-  - path: '.\SquirrelReleases\x86'
+  - path: '.\SquirrelReleases\x86\*'
     name: releasesx86
 
-  - path: '.\SquirrelReleases\x64'
+  - path: '.\SquirrelReleases\x64\*'
     name: releasesx64
 
 #---------------------------------#
